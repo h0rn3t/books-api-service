@@ -1,0 +1,8 @@
+fastapi
+motor
+pydantic
+ujson
+nameko
+uvicorn
+aiohttp
+aiohttp_requests
