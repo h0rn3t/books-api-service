@@ -48,9 +48,9 @@ async def give_book(request: GiveRequest):
 
 @app.post("/send_report")
 async def send_report():
-    response = await requests.get('https://api.github.com/user', auth=aiohttp.BasicAuth('user', 'password'))
+    response = await requests.post('http://0.0.0.0:8888/send_report', auth=aiohttp.BasicAuth('user', 'password'))  # хотел сделать какую-то авторизацию на сервисе но влом
     json = await response.json()
-    return {'result': True}
+    return {'result': True, 'response': json}
 
 
 @app.get("/auth")

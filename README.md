@@ -20,3 +20,19 @@ http://0.0.0.0:8000/add_book  добавить книгу в базу
 	"title":"451° по Фаренгейту",
 	"content": "какой-то контент:)"
 }
+
+
+
+Запуск через докер:
+
+docker-compose build
+
+docker-compose up -d
+
+
+
+Запуск локально
+
+pip install -r requirements.txt
+
+uvicorn main:app --reload --host=0.0.0.0 && nameko run http_service --config service_conf.yaml
